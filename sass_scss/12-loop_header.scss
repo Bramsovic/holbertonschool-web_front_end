@@ -1,4 +1,4 @@
-/* 12-loop_header.scss: génère des balises h1 à h5 avec font-size correspondant */
+/* 12-loop_header.scss: generates h1 to h5 tags with corresponding font-size */
 @for $i from 1 through 5 {
     h#{$i} {
       font-size: #{$i}px;
