@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="https://raw.githubusercontent.com/encharm/Font-Awesome-SVG-PNG/master/black/svg/sass.svg" alt="Sass" width="60" height="60"/>
+  <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/sass/sass-original.svg" alt="Sass" width="60" height="60"/>
   <h1 align="center">Sass/SCSS Fundamentals</h1>
   <p align="center">Holberton School • SCSS CLI Module</p>
 </p>
