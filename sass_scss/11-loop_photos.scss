@@ -1,0 +1,10 @@
+/*11-loop_photos.scss*/
+
+/* 11-loop_photos.scss: génère des classes photo-<name> avec @each */
+@use '11-photos' as photos;
+
+@each $name in photos.$list-names {
+  .photo-#{$name} {
+    background: image-url("photos/#{$name}.jpg") no-repeat;
+  }
+}
