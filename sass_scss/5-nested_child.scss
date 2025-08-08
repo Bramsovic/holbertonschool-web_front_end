@@ -1,0 +1,11 @@
+/*5-nested_child.scss*/
+
+$color1: #3D3D3D;
+$color3: #FF0000;
+
+body {
+    color: $color1;
+    > .red {
+        color: $color3;
+    }
+}
