@@ -1,4 +1,4 @@
-# Flexbox — Techium Website (Holberton School)
+# Flexbox 
 
 A project to refactor the **Techium** static site using Flexbox only (HTML & CSS). You’ll progressively replace float-based layouts, align content on both axes, and build an article hero.
 
