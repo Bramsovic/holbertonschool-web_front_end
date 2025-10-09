@@ -10,7 +10,7 @@
     <link rel="stylesheet" href="14-styles.css">
   </head>
   <body>
-    <!-- Header -->
+    <!-- Site Header -->
     <header class="header" data-section-theme="dark">
       <div class="container">
         <div class="header-container">
@@ -32,74 +32,77 @@
       </div>
     </header>
 
-    <!-- Hero section for article -->
-    <header class="section-hero hero-article" style="background-image: url('images/pic-article-02.jpg')" data-section-theme="dark">
-      <div class="container">
-        <div class="section-body">
-          <section class="section-inner">
-            <span class="section-category">Digital Life</span>
-            <h1 class="section-title">Ut alios omittam, hunc appello, quem ille unum secutus est</h1>
-          </section>
+    <!-- Main -->
+    <main>
+      <!-- Hero section for article (must be inside <main>) -->
+      <header class="section-hero hero-article" style="background-image: url('images/pic-article-02.jpg')" data-section-theme="dark">
+        <div class="container">
+          <div class="section-body">
+            <section class="section-inner">
+              <span class="section-category">Digital Life</span>
+              <h1 class="section-title">Ut alios omittam, hunc appello, quem ille unum secutus est</h1>
+            </section>
+          </div>
+        </div>
+      </header>
+
+      <!-- Main article structure (sibling of hero header) -->
+      <div class="main-article">
+        <div class="container">
+          <div class="post">
+            <article class="post-content">
+              <h2>Introduction</h2>
+              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ante dapibus diam.</p>
+
+              <h3>Section</h3>
+              <p>Suspendisse potenti. Sed dignissim lacinia nunc. Curabitur tortor. Pellentesque nibh. Aenean quam.</p>
+
+              <p>Contenu fictif pour simuler un article long. Ajoute ici les paragraphes et images nécessaires.</p>
+            </article>
+
+            <!-- Aside section -->
+            <aside class="post-aside">
+              <div class="post-meta">
+                <h4>Post meta</h4>
+
+                <!-- meta list -->
+                <ul class="post-meta-list row">
+                  <li class="post-meta-author">
+                    <strong>Written by:</strong>
+                    <a href="#" rel="author">William Attaway</a>
+                  </li>
+                  <li class="post-meta-date">
+                    <strong>Posted on:</strong>
+                    <time datetime="2019-10">October 2019</time>
+                  </li>
+                  <li class="post-meta-tag">
+                    <strong>Tags:</strong>
+                    <ul class="tag-list">
+                      <li><a href="#" rel="tag">Web Design</a></li>
+                      <li><a href="#" rel="tag">UX</a></li>
+                    </ul>
+                  </li>
+                </ul>
+                <!-- /meta list -->
+
+              </div>
+              <div class="post-share">
+                <h4>Share</h4>
+                <!-- social nav copied from footer, Instagram removed, href set to # -->
+                <ul class="social nav">
+                  <li class="social-item nav-item">
+                    <a href="#" class="social-link">Facebook</a>
+                  </li>
+                  <li class="social-item nav-item">
+                    <a href="#" class="social-link">Twitter</a>
+                  </li>
+                </ul>
+              </div>
+            </aside>
+          </div>
         </div>
       </div>
-    </header>
-
-    <!-- Main article structure (sibling of hero header) -->
-    <div class="main-article">
-      <div class="container">
-        <div class="post">
-          <article class="post-content">
-            <h2>Introduction</h2>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ante dapibus diam.</p>
-
-            <h3>Section</h3>
-            <p>Suspendisse potenti. Sed dignissim lacinia nunc. Curabitur tortor. Pellentesque nibh. Aenean quam.</p>
-
-            <p>Contenu fictif pour simuler un article long. Ajoute ici les paragraphes et images nécessaires.</p>
-          </article>
-
-          <!-- Aside section -->
-          <aside class="post-aside">
-            <div class="post-meta">
-              <h4>Post meta</h4>
-
-              <!-- meta list -->
-              <ul class="post-meta-list row">
-                <li class="post-meta-author">
-                  <strong>Written by:</strong>
-                  <a href="#" rel="author">William Attaway</a>
-                </li>
-                <li class="post-meta-date">
-                  <strong>Posted on:</strong>
-                  <time datetime="2019-10">October 2019</time>
-                </li>
-                <li class="post-meta-tag">
-                  <strong>Tags:</strong>
-                  <ul class="tag-list">
-                    <li><a href="#" rel="tag">Web Design</a></li>
-                    <li><a href="#" rel="tag">UX</a></li>
-                  </ul>
-                </li>
-              </ul>
-              <!-- /meta list -->
-
-            </div>
-            <div class="post-share">
-              <h4>Share</h4>
-              <!-- social nav copied from footer, Instagram removed, href set to # -->
-              <ul class="social nav">
-                <li class="social-item nav-item">
-                  <a href="#" class="social-link">Facebook</a>
-                </li>
-                <li class="social-item nav-item">
-                  <a href="#" class="social-link">Twitter</a>
-                </li>
-              </ul>
-            </div>
-          </aside>
-        </div>
-      </div>
-    </div>
+    </main>
 
     <!-- Footer -->
     <footer class="footer" data-section-theme="dark">
