@@ -1,0 +1,79 @@
+/* === Boutons primaires === */
+.btn-primary {
+    background-color: #E0003C;
+    border-color: #E0003C;
+}
+
+.btn-primary:hover,
+.btn-primary:focus,
+.btn-primary:active,
+.btn-primary:not(:disabled):not(.disabled):active,
+.show > .btn-primary.dropdown-toggle {
+    background-color: #BC1340;
+    border-color: #BC1340;
+}
+
+.btn-primary:focus,
+.btn-primary.focus,
+.btn-primary:not(:disabled):not(.disabled):active:focus,
+.show > .btn-primary.dropdown-toggle:focus {
+    box-shadow: 0 0 0 0.2rem rgba(224, 0, 60, 0.5);
+}
+
+/* === Bouton outline primaire (ex: "Sign up" en haut à droite) === */
+.btn-outline-primary {
+    color: #E0003C;
+    border-color: #E0003C;
+}
+
+.btn-outline-primary:hover,
+.btn-outline-primary:focus,
+.btn-outline-primary:active,
+.btn-outline-primary:not(:disabled):not(.disabled):active,
+.show > .btn-outline-primary.dropdown-toggle {
+    background-color: #E0003C;
+    border-color: #E0003C;
+    color: #ffffff;
+}
+
+/* === Liens : toujours rouges, même si une autre couleur est forcée === */
+a,
+a:hover,
+a:focus {
+    color: #E0003C !important;
+}
+
+/* === Cards === */
+.card {
+    border-color: #E0003C;
+    border-radius: 1rem;
+}
+
+/* header / footer bordures + arrondis */
+.card-header,
+.card-footer {
+    border-color: #E0003C;
+}
+
+/* header rouge + texte blanc + coins arrondis en haut */
+.card-header {
+    background-color: #E0003C;
+    color: #ffffff;
+    border-bottom-color: #E0003C;
+    border-radius: calc(1rem - 1px) calc(1rem - 1px) 0 0;
+}
+
+/* footer coins arrondis en bas */
+.card-footer:last-child {
+    border-radius: 0 0 calc(1rem - 1px) calc(1rem - 1px);
+}
+
+/* === Texte muted (footer, dates, etc.) === */
+.text-muted {
+    color: #8C8C8C !important;
+}
+
+/* === Ligne rouge sous la barre du haut (comme sur ta capture) === */
+.border-bottom {
+    border-bottom-color: #E0003C !important;
+}
