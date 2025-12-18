@@ -8,7 +8,6 @@ function processOrder(orderId, amount) {
   console.log(`${orderId} has been fully processed`);
 }
 
-// Code principal
 console.log('Processing orders');
 processOrder(12321, 10.99);
 processOrder(12322, 12.99);
