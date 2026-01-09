@@ -1,0 +1,93 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Task 11</title>
+  </head>
+  <body>
+    <script
+      src="https://code.jquery.com/jquery-3.7.1.min.js"
+      type="application/javascript"
+    ></script>
+
+    <script type="application/javascript">
+      function addPostRow(data) {
+        $("body").append(
+          $("<p>").append(
+            $("<span>").text(
+              "Post created with id " +
+                data.id +
+                ", title: " +
+                data.title +
+                ", author: " +
+                data.author
+            )
+          )
+        );
+      }
+
+      function listPosts() {
+        $.get("http://localhost:3000/posts")
+          .done(function (response) {
+            response.forEach(function (post) {
+              addPostRow(post);
+            });
+          })
+          .fail(function () {
+            alert("Server Error");
+          });
+      }
+
+      function buildForm() {
+        const $form = $("<form>");
+
+        $form.append(
+          $("<div>").append(
+            $("<label>", { for: "author" }).text("Author"),
+            $("<input>", { type: "text", id: "author" })
+          ),
+          $("<div>").append(
+            $("<label>", { for: "title" }).text("Title"),
+            $("<textarea>", { id: "title" })
+          ),
+          $("<input>", { type: "submit", value: "Submit" })
+        );
+
+        $("body").prepend($form);
+
+        $form.on("submit", function (e) {
+          e.preventDefault();
+          sendForm();
+        });
+      }
+
+      function sendForm() {
+        $("form").first().after("About to send the query to the API");
+
+        const data = {
+          title: $("#title").val(),
+          author: $("#author").val(),
+        };
+
+        $.ajax({
+          url: "http://localhost:3000/posts",
+          method: "POST",
+          contentType: "application/json",
+          data: JSON.stringify(data),
+          success: function (response) {
+            addPostRow(response);
+          },
+          error: function () {
+            alert("Error sending the POST query");
+          },
+        });
+      }
+
+      $(function () {
+        listPosts();
+        buildForm();
+      });
+    </script>
+  </body>
+</html>
