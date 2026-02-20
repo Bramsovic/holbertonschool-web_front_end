@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cookies</title>
+  <style>
+    body {
+      margin: 20px;
+      background: #fff;
+    }
+
+    h1,
+    h2 {
+      font-family: "Times New Roman", Times, serif;
+      font-weight: 800;
+      color: #000;
+      margin: 0;
+    }
+
+    h1 {
+      font-size: 72px;
+      margin-bottom: 30px;
+    }
+
+    .login-row {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+    }
+
+    .login-row input {
+      border: 2px solid #d9d9d9;
+      border-radius: 3px;
+      font-size: 30px;
+      height: 52px;
+      outline: none;
+      padding: 8px 14px;
+      width: 430px;
+    }
+
+    button {
+      background: #fff;
+      border: 2px solid #d9d9d9;
+      border-radius: 12px;
+      cursor: pointer;
+      font-size: 30px;
+      height: 52px;
+      padding: 6px 18px;
+    }
+
+    h2 {
+      font-size: 72px;
+      margin-top: 80px;
+      margin-bottom: 35px;
+    }
+
+    p {
+      margin-top: 25px;
+      font-size: 18px;
+      font-family: Arial, Helvetica, sans-serif;
+    }
+  </style>
+</head>
+<body>
+  <h1>Login to the website</h1>
+  <div class="login-row">
+    <input type="text" id="firstname" placeholder="Firstname">
+    <input type="text" id="email" placeholder="Email">
+    <button type="button" onclick="setCookies()">Log me in</button>
+  </div>
+
+  <h2>Cookies</h2>
+  <button type="button" onclick="showCookies()">Show the cookies</button>
+
+  <script>
+    function setCookies() {
+      var firstnameValue = document.getElementById('firstname').value;
+      var emailValue = document.getElementById('email').value;
+      var date = new Date();
+      var tenDays = 10 * 24 * 60 * 60 * 1000;
+      date.setTime(date.getTime() + tenDays);
+      var expires = 'expires=' + date.toUTCString();
+
+      document.cookie = 'firstname=' + encodeURIComponent(firstnameValue) + '; ' + expires + '; path=/';
+      document.cookie = 'email=' + encodeURIComponent(emailValue) + '; ' + expires + '; path=/';
+    }
+
+    function showCookies() {
+      var paragraph = document.createElement('p');
+      paragraph.innerHTML = 'Cookies: ' + document.cookie;
+      document.body.appendChild(paragraph);
+    }
+  </script>
+</body>
+</html>
